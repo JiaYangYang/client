@@ -1,0 +1,11 @@
+html {
+    color: #000;
+    font-size: 100%;
+    background: #FFF;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+body {
+    font-family: 'Crimson Text', serif;
+}
