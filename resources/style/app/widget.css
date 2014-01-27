@@ -1,0 +1,21 @@
+* {
+    outline: none;
+}
+
+.grid-widget {
+    margin: 5px 5px 5px 0;
+    padding: 0.5em;
+    border-collapse: collapse;
+    border: 1px solid #b0bfd3;
+}
+
+.grid-widget caption {
+    text-align: center;
+    border: 1px solid #b0bfd3;
+    border-bottom: none;
+}
+
+.grid-widget td {
+    border: 1px solid #b0bfd3;
+    padding: 3px 8px 3px 8px;
+}

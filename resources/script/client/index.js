@@ -1,5 +1,5 @@
 require(['dojo/dom',
-    'module/Slider',
+    'client/module/Slider',
     'dojo/domReady!'],
     function (dom, Slider) {
         var node = dom.byId('slider');
