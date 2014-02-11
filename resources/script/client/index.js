@@ -13,7 +13,7 @@ require(['dojo/dom',
                 },
                 {
                     src: 'resources/images/image-slider-2.jpg',
-                    alt: ''
+                    alt: 'Taste of Happniess'
                 },
                 {
                     src: 'resources/images/image-slider-3.jpg',

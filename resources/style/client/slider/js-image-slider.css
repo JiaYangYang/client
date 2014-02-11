@@ -14,7 +14,7 @@
 #slider {
 	background:#fff url(../../../images/slider/loading.gif) no-repeat 50% 50%;
 	position:relative;
-	margin:0 auto; /*center-aligned*/
+	margin:0;
     transform: translate3d(0,0,0);
     box-shadow: 0px 1px 5px #999999;
 }
@@ -68,11 +68,12 @@
 /* ------ built-in navigation bullets wrapper ------*/
 /* Note: check themes\2\js-image-slider.css to see how to hide nav bullets */
 #slider div.navBulletsWrapper  {
-    top:320px;/* Its position is relative to the #slider */
-	text-align:center;
+    top:275px;/* Its position is relative to the #slider */
+	text-align:right;
 	background:none;
 	position:relative;
 	z-index:5;
+	padding:0 5px 0 0;
 }
 
 /* each bullet */
