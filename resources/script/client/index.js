@@ -91,4 +91,15 @@ require(['dojo/dom',
 					}
 				});
 			});
+
+		/*travel*/
+		request("/client/server/rest/data/travel.json", {
+				handleAs : "json"
+			}).then(function(travels){
+				var ul = domStruct.create("ul", null, 'travel');
+				array.forEach(travels, function(travel){
+					var li = domStruct.create("li", null, ul);
+					domStruct.create("a", {innerHTML:travel.title, href:travel.target}, li);
+				});
+			});
     });

@@ -51,3 +51,37 @@ div.listright ul li{
 	padding:0px;
 	margin:2px 2px 0 0;
 }
+
+#travel{
+	background:url(../../images/travel.png) no-repeat;
+	padding:30px 0px 0px 0px;
+	background-color:#DEF1FF;
+	border:1px solid #226c81;
+	margin:5px 0px 0px 0px;
+	height:120px;
+}
+
+#travel ul{
+	list-style:none;
+	padding:0px 0px 5px 0px;
+	margin:0px;
+}
+
+#travel ul li{
+	padding:3px 0px 0px 30px;
+	background:url(../../images/li.gif) no-repeat 20px 12px;
+	margin:0px 0px 3px 0px;
+	float:left;
+	width:300px;
+}
+
+#travel ul li a:hover{
+	color:#000000;
+	text-decoration:underline;
+}
+
+#travel ul li a:link, a:visited{
+	text-decoration: none;
+	color: #004E8A;
+	font-size:12px;
+}
