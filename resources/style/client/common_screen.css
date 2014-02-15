@@ -20,4 +20,8 @@
         top: 0;
         text-align: right;
     }
+
+	#footerNode{
+		clear:both;
+	}
 }

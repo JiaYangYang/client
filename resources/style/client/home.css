@@ -1,0 +1,53 @@
+div.mainPane{
+	width:700px;
+	padding:0px;
+	float:left;
+	margin:5px 0px;
+}
+
+#hot{
+	background:url(../../images/hot.png) no-repeat;
+	padding:30px 0px 0px 0px;
+	background-color:#DEF1FF;
+	border:1px solid #226c81;
+	margin:0px;
+	height:310px;
+}
+
+#latest{
+	background:url(../../images/latest.png) no-repeat;
+	padding:30px 0px 0px 0px;
+	background-color:#DEF1FF;
+	border:1px solid #226c81;
+	margin:5px 0 0 0;
+	height:310px;
+}
+
+div.listleft{
+	float:left;
+	width:304px;
+	padding:0px;
+	margin:2px 5px 2px 2px;
+	height:310px;
+}
+
+div.listright{
+	float:left;
+	width:385px;
+	padding:0px;
+	height:310px;
+}
+
+div.listright ul{
+	list-style-image:none;
+	list-style-type:none;
+	padding:0px;
+	margin:0px;
+}
+
+div.listright ul li{
+	display:block;
+	float:left;
+	padding:0px;
+	margin:2px 2px 0 0;
+}

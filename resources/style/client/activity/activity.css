@@ -1,0 +1,46 @@
+div.act{
+	font-size:12px;
+	padding:1px;
+	margin:0px;
+	border:solid 1px #B5BCC7;
+}
+
+div.actTitle{
+	position:relative;
+	left:0px;
+	bottom:25px;
+	color:white;
+	font-weight:bold;
+	background-color:rgba(0, 0, 0, 0.45);	
+	padding:0px;
+	margin:0px;
+	height:21px;
+	line-height:21px;
+}
+
+div.actContent{
+	margin:-23px 0px 2px 0px;
+	padding:0px;
+	color:#6BA3DB;
+	font-weight:bold;
+}
+
+img.actAuthor{
+	width:16px;
+	height:14px;
+	padding:0px;
+	margin:0px;
+	border:1px solid #4ab0ff;
+}
+img.actSchema{
+	border:none;
+}
+
+div.actStat{
+	padding:0px;
+	color:#D1B9AE;
+}
+
+div.actDetail span{
+	color:#3289D7;
+}

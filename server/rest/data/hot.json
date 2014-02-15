@@ -1,0 +1,47 @@
+[
+	{
+		"title" : "Lucky Day",
+		"content" : "It is a beautiful day",
+		"author" : "Bryan Forbes",
+		"browse" : "Browse:2",
+		"actTarget" : "#",
+		"actImage" : "resources/images/image-slider-1.jpg",
+		"authorImage" : "resources/images/sam_foster.jpg"
+	},
+	{
+		"title" : "Lucky Day",
+		"content" : "It is a beautiful day",
+		"author" : "Bryan Forbes",
+		"browse" : "Browse:2",
+		"actTarget" : "#",
+		"actImage" : "resources/images/image-slider-2.jpg",
+		"authorImage" : "resources/images/tom_trenka.jpg"
+	},
+	{
+		"title" : "Lucky Day",
+		"content" : "It is a beautiful day",
+		"author" : "Bryan Forbes",
+		"browse" : "Browse:2",
+		"actTarget" : "#",
+		"actImage" : "resources/images/image-slider-3.jpg",
+		"authorImage" : "resources/images/sam_foster.jpg"
+	},
+	{
+		"title" : "Lucky Day",
+		"content" : "It is a beautiful day",
+		"author" : "Bryan Forbes",
+		"browse" : "Browse:2",
+		"actTarget" : "#",
+		"actImage" : "resources/images/image-slider-2.jpg",
+		"authorImage" : "resources/images/sam_foster.jpg"
+	},
+	{
+		"title" : "Lucky Day",
+		"content" : "It is a beautiful day",
+		"author" : "Bryan Forbes",
+		"browse" : "Browse:2",
+		"actTarget" : "#",
+		"actImage" : "resources/images/image-slider-1.jpg",
+		"authorImage" : "resources/images/tom_trenka.jpg"
+	}
+]
