@@ -1,13 +1,11 @@
 require(['dojo/dom',
     'client/module/Slider',
 	'client/module/Activity',
-	'dojox/layout/ContentPane',
-	'dijit/layout/BorderContainer',
 	'dojo/dom-construct',
 	'dojo/request',
 	'dojo/_base/array',
     'dojo/domReady!'],
-    function (dom, Slider, Activity, ContentPane, BorderContainer, domStruct, request, array) {
+    function (dom, Slider, Activity, domStruct, request, array) {
         var node = dom.byId('slider');
         node && new Slider({
             layout: [
