@@ -1,0 +1,42 @@
+[
+	{
+		"avatar": "./resources/images/sam_foster.jpg",
+		"title": "Optional positional reference node",
+		"target": "#" 
+	},
+	{
+		"avatar": "./resources/images/sam_foster.jpg",
+		"title": "Passing along optional reference node",
+		"target": "#" 
+	},
+	{
+		"avatar": "./resources/images/sam_foster.jpg",
+		"title": "Optional positional reference node",
+		"target": "#" 
+	},
+	{
+		"avatar": "./resources/images/sam_foster.jpg",
+		"title": "Passing along optional reference node",
+		"target": "#" 
+	},
+		{
+		"avatar": "./resources/images/sam_foster.jpg",
+		"title": "Passing along optional reference node",
+		"target": "#" 
+	},
+	{
+		"avatar": "./resources/images/sam_foster.jpg",
+		"title": "Optional positional reference node",
+		"target": "#" 
+	},
+	{
+		"avatar": "./resources/images/sam_foster.jpg",
+		"title": "Passing along optional reference node",
+		"target": "#" 
+	},
+	{
+		"avatar": "./resources/images/sam_foster.jpg",
+		"title": "Optional positional reference node",
+		"target": "#" 
+	}
+]

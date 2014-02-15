@@ -61,7 +61,7 @@ div.listright ul li{
 	height:120px;
 }
 
-#travel ul{
+#travel ul, #recent ul, #recommendation ul, #advisory ul{
 	list-style:none;
 	padding:0px 0px 5px 0px;
 	margin:0px;
@@ -75,8 +75,21 @@ div.listright ul li{
 	width:300px;
 }
 
-#travel ul li a:hover{
-	color:#000000;
+#recent ul li, #recommendation ul li, #advisory ul li{
+	padding:3px 0px 0px 30px;
+	background:url(../../images/li.gif) no-repeat 20px 10px;
+	margin:0px 0px 5px 0px;
+}
+
+#recent ul li img{
+	width:16px;
+	height:14px;
+	border:1px solid #4ab0ff;
+	margin:0 5px 0 0;
+}
+
+#travel ul li a:hover, #recent ul li a:hover, #advisory ul li a:hover, #recommendation ul li a:hover{
+	color:rgba(255, 126, 0, 0.9);
 	text-decoration:underline;
 }
 
@@ -84,4 +97,48 @@ div.listright ul li{
 	text-decoration: none;
 	color: #004E8A;
 	font-size:12px;
+}
+
+#recent ul li a:link, a:visited{
+	text-decoration: none;
+	color: #004E8A;
+	font-size:12px;
+}
+
+#advisory ul li a:link, a:visited{
+	text-decoration: none;
+	color: #004E8A;
+	font-size:12px;
+}
+
+#recommendation ul li a:link, a:visited{
+	text-decoration: none;
+	color: #000;
+	font-size:12px;
+}
+
+div.rightPane{
+	float:right;
+	width:290px;
+	border:1px solid #226c81;
+	color:#FEFEFE;
+	font-size:12px;
+	margin:5px 0px;
+	padding:0px 0px 2px 0px;
+}
+
+#recent, #recommendation, #advisory{
+	background-color:#DEF1FF;
+	padding:1px 0px 4px 0px;
+	margin:0px;
+}
+
+h3.title{
+	background:url(../../images/titlebg.jpg) no-repeat;
+	padding:8px 0px 0px 55px;
+	height:32px;
+	margin:0px;
+	color:#FFF;
+	font-size:12px;
+	font-weight:bold;
 }

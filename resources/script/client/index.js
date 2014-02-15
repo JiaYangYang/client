@@ -102,4 +102,40 @@ require(['dojo/dom',
 					domStruct.create("a", {innerHTML:travel.title, href:travel.target}, li);
 				});
 			});
+
+		/*right Pane*/
+		domStruct.create("h3",{class:'title', innerHTML:'Recent Activity'}, 'recent');
+		domStruct.create("h3",{class:'title', innerHTML:'Recommendation'}, 'recommendation');
+		domStruct.create("h3",{class:'title', innerHTML:'Advisory Commen Sense'}, 'advisory');
+
+		request("/client/server/rest/data/recent.json", {
+				handleAs : "json"
+			}).then(function(acts){
+				var ul = domStruct.create("ul", null, 'recent');
+				array.forEach(acts, function(act){
+					var li = domStruct.create("li", null, ul);
+					domStruct.create("img", {src:act.avatar}, li);
+					domStruct.create("a", {innerHTML:act.title, href:act.target}, li);
+				});
+			});
+
+		request("/client/server/rest/data/recommendation.json", {
+				handleAs : "json"
+			}).then(function(routes){
+				var ul = domStruct.create("ul", null, 'recommendation');
+				array.forEach(routes, function(route){
+					var li = domStruct.create("li", null, ul);
+					domStruct.create("a", {innerHTML:route.title, href:route.target}, li);
+				});
+			});
+
+		request("/client/server/rest/data/advisory.json", {
+			handleAs : "json"
+			}).then(function(advisory){
+				var ul = domStruct.create("ul", null, 'advisory');
+				array.forEach(advisory, function(adv){
+					var li = domStruct.create("li", null, ul);
+					domStruct.create("a", {innerHTML:adv.title, href:adv.target}, li);
+				});
+		});
     });
