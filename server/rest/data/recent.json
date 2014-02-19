@@ -1,42 +1,34 @@
 [
 	{
-		"avatar": "./resources/images/sam_foster.jpg",
 		"title": "Optional positional reference node",
-		"target": "#" 
+		"author" : "tom_trenka",
+		"time" : "start : 2014-02-28",
+		"authorImg": "./resources/images/tom_trenka.jpg",
+		"authorRef": "#" ,
+		"activityRef" : "#"
 	},
 	{
-		"avatar": "./resources/images/sam_foster.jpg",
-		"title": "Passing along optional reference node",
-		"target": "#" 
-	},
-	{
-		"avatar": "./resources/images/sam_foster.jpg",
 		"title": "Optional positional reference node",
-		"target": "#" 
+		"author" : "sam_foster",
+		"time" : "start : 2014-02-28",
+		"authorImg": "./resources/images/sam_foster.jpg",
+		"authorRef": "#" ,
+		"activityRef" : "#"
 	},
 	{
-		"avatar": "./resources/images/sam_foster.jpg",
-		"title": "Passing along optional reference node",
-		"target": "#" 
-	},
-		{
-		"avatar": "./resources/images/sam_foster.jpg",
-		"title": "Passing along optional reference node",
-		"target": "#" 
-	},
-	{
-		"avatar": "./resources/images/sam_foster.jpg",
 		"title": "Optional positional reference node",
-		"target": "#" 
+		"author" : "tom_trenka",
+		"time" : "start : 2014-02-28",
+		"authorImg": "./resources/images/tom_trenka.jpg",
+		"authorRef": "#" ,
+		"activityRef" : "#"
 	},
 	{
-		"avatar": "./resources/images/sam_foster.jpg",
-		"title": "Passing along optional reference node",
-		"target": "#" 
-	},
-	{
-		"avatar": "./resources/images/sam_foster.jpg",
 		"title": "Optional positional reference node",
-		"target": "#" 
+		"author" : "sam_foster",
+		"time" : "start : 2014-02-28",
+		"authorImg": "./resources/images/sam_foster.jpg",
+		"authorRef": "#" ,
+		"activityRef" : "#"
 	}
 ]

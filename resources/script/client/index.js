@@ -1,11 +1,12 @@
 require(['dojo/dom',
     'client/module/Slider',
 	'client/module/Activity',
+	'client/module/ListActivity',
 	'dojo/dom-construct',
 	'dojo/request',
 	'dojo/_base/array',
     'dojo/domReady!'],
-    function (dom, Slider, Activity, domStruct, request, array) {
+    function (dom, Slider, Activity, ListActivity, domStruct, request, array) {
         var node = dom.byId('slider');
         node && new Slider({
             layout: [
@@ -114,8 +115,7 @@ require(['dojo/dom',
 				var ul = domStruct.create("ul", null, 'recent');
 				array.forEach(acts, function(act){
 					var li = domStruct.create("li", null, ul);
-					domStruct.create("img", {src:act.avatar}, li);
-					domStruct.create("a", {innerHTML:act.title, href:act.target}, li);
+					var listact = new ListActivity(act).placeAt(li);
 				});
 			});
 
@@ -125,7 +125,7 @@ require(['dojo/dom',
 				var ul = domStruct.create("ul", null, 'recommendation');
 				array.forEach(routes, function(route){
 					var li = domStruct.create("li", null, ul);
-					domStruct.create("a", {innerHTML:route.title, href:route.target}, li);
+					var listact = new ListActivity(route).placeAt(li);
 				});
 			});
 

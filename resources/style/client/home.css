@@ -75,17 +75,15 @@ div.listright ul li{
 	width:300px;
 }
 
-#recent ul li, #recommendation ul li, #advisory ul li{
+#advisory ul li{
 	padding:3px 0px 0px 30px;
 	background:url(../../images/li.gif) no-repeat 20px 10px;
 	margin:0px 0px 5px 0px;
 }
 
-#recent ul li img{
-	width:16px;
-	height:14px;
-	border:1px solid #4ab0ff;
-	margin:0 5px 0 0;
+#recent ul li, #recommendation ul li{
+	padding:0px;
+	margin:0 0 3px 10px;
 }
 
 #travel ul li a:hover, #recent ul li a:hover, #advisory ul li a:hover, #recommendation ul li a:hover{
@@ -131,6 +129,10 @@ div.rightPane{
 	background-color:#DEF1FF;
 	padding:1px 0px 4px 0px;
 	margin:0px;
+}
+
+#recent, #recommendation{
+	height:260px;
 }
 
 h3.title{

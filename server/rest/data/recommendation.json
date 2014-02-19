@@ -1,34 +1,34 @@
 [
 	{
-		"title": "This module defines the core dojo geometry",
-		"target": "#"
+		"title": "Optional positional reference node",
+		"author" : "tom_trenka",
+		"time" : "start : 2014-02-28",
+		"authorImg": "./resources/images/tom_trenka.jpg",
+		"authorRef": "#" ,
+		"activityRef" : "#"
 	},
 	{
-		"title": "This module defines the core dojo geometry",
-		"target": "#"
+		"title": "Optional positional reference node",
+		"author" : "sam_foster",
+		"time" : "start : 2014-02-28",
+		"authorImg": "./resources/images/sam_foster.jpg",
+		"authorRef": "#" ,
+		"activityRef" : "#"
 	},
 	{
-		"title": "This module defines the core dojo geometry",
-		"target": "#"
+		"title": "Optional positional reference node",
+		"author" : "tom_trenka",
+		"time" : "start : 2014-02-28",
+		"authorImg": "./resources/images/tom_trenka.jpg",
+		"authorRef": "#" ,
+		"activityRef" : "#"
 	},
 	{
-		"title": "This module defines the core dojo geometry",
-		"target": "#"
-	},
-	{
-		"title": "This module defines the core dojo geometry",
-		"target": "#"
-	},
-	{
-		"title": "This module defines the core dojo geometry",
-		"target": "#"
-	},
-	{
-		"title": "This module defines the core dojo geometry",
-		"target": "#"
-	},
-	{
-		"title": "This module defines the core dojo geometry",
-		"target": "#"
+		"title": "Optional positional reference node",
+		"author" : "sam_foster",
+		"time" : "start : 2014-02-28",
+		"authorImg": "./resources/images/sam_foster.jpg",
+		"authorRef": "#" ,
+		"activityRef" : "#"
 	}
 ]

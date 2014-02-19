@@ -1,0 +1,43 @@
+div.listimage{
+	float:left;
+	height:50px;
+	width:50px;
+	padding:0px;
+	margin:0 12px 5px 0;
+}
+
+div.listimage img{
+	border:none;
+}
+
+div.listtext{
+	float:left;
+	width:190px;
+	margin:0 0 5px 0;
+}
+
+div.listtext h3{
+	color: #2B2B2B;
+    font-size: 14px;
+    font-weight: 100;
+    height: 30px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 190px;
+    word-wrap: break-word;
+	word-break: break-all;
+	margin:0px;
+}
+
+div.listtext p{
+	color: #9C9C9C;
+    font-size: 12px;
+    line-height: 20px;
+	margin:0px;
+}
+
+div.listtext span{
+	padding: 0 15px 0 0;
+}
