@@ -1,5 +1,5 @@
 define([
-    '../../dojo/_base/declare',
+    'dojo/_base/declare',
     'dojo/dom',
     'dojo/_base/array',
     'dojo/dom-construct',

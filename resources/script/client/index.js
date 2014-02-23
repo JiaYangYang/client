@@ -1,12 +1,14 @@
-require(['dojo/dom',
-    'client/module/Slider',
-	'client/module/Activity',
-	'client/module/ListActivity',
+require([
+    'dojo/dom',
+    'dojo/on',
 	'dojo/dom-construct',
 	'dojo/request',
 	'dojo/_base/array',
+    'client/module/Slider',
+    'client/module/Activity',
+    'client/module/ListActivity',
     'dojo/domReady!'],
-    function (dom, Slider, Activity, ListActivity, domStruct, request, array) {
+    function (dom, on, domConstruct, request, array, Slider, Activity, ListActivity) {
         var node = dom.byId('slider');
         node && new Slider({
             layout: [
@@ -26,16 +28,22 @@ require(['dojo/dom',
                 }
             ]
         }, node);
+
+        node = dom.byId('publishButton');
+        var signal = on(node, 'click', function() {
+            signal.remove();
+            location.assign('event/publish.html');
+        });
 		
 		/* hot activity*/
 		request("/client/server/rest/data/hot.json", {
 			handleAs : "json"
 			}).then(function(hot){
 				var latest = dom.byId('hot');
-				var left = domStruct.create('div', {className:'listleft'}, latest);
-				var right = domStruct.create('div', {className:'listright'}, latest);
-				var firstline = domStruct.create('ul', {className:'figrueslist'}, right);
-				var secondline = domStruct.create('ul', {className:'figrueslist'}, right);
+				var left = domConstruct.create('div', {className:'listleft'}, latest);
+				var right = domConstruct.create('div', {className:'listright'}, latest);
+				var firstline = domConstruct.create('ul', {className:'figrueslist'}, right);
+				var secondline = domConstruct.create('ul', {className:'figrueslist'}, right);
 				
 				array.forEach(hot, function(act, idx){
 					if(0 == idx){
@@ -54,7 +62,7 @@ require(['dojo/dom',
 							pos = secondline;								
 						}
 
-						var li = domStruct.create('li',{className:'figure'}, pos);
+						var li = domConstruct.create('li',{className:'figure'}, pos);
 						var actFirst = new Activity(act).placeAt(li);
 					}
 				});
@@ -65,10 +73,10 @@ require(['dojo/dom',
 			handleAs : "json"
 			}).then(function(hot){
 				var latest = dom.byId('latest');
-				var left = domStruct.create('div', {className:'listleft'}, latest);
-				var right = domStruct.create('div', {className:'listright'}, latest);
-				var firstline = domStruct.create('ul', {className:'figrueslist'}, right);
-				var secondline = domStruct.create('ul', {className:'figrueslist'}, right);
+				var left = domConstruct.create('div', {className:'listleft'}, latest);
+				var right = domConstruct.create('div', {className:'listright'}, latest);
+				var firstline = domConstruct.create('ul', {className:'figrueslist'}, right);
+				var secondline = domConstruct.create('ul', {className:'figrueslist'}, right);
 				
 				array.forEach(hot, function(act, idx){
 					if(0 == idx){
@@ -87,7 +95,7 @@ require(['dojo/dom',
 							pos = secondline;								
 						}
 
-						var li = domStruct.create('li',{className:'figure'}, pos);
+						var li = domConstruct.create('li',{className:'figure'}, pos);
 						var actFirst = new Activity(act).placeAt(li);
 					}
 				});
@@ -97,24 +105,24 @@ require(['dojo/dom',
 		request("/client/server/rest/data/travel.json", {
 				handleAs : "json"
 			}).then(function(travels){
-				var ul = domStruct.create("ul", null, 'travel');
+				var ul = domConstruct.create("ul", null, 'travel');
 				array.forEach(travels, function(travel){
-					var li = domStruct.create("li", null, ul);
-					domStruct.create("a", {innerHTML:travel.title, href:travel.target}, li);
+					var li = domConstruct.create("li", null, ul);
+					domConstruct.create("a", {innerHTML:travel.title, href:travel.target}, li);
 				});
 			});
 
 		/*right Pane*/
-		domStruct.create("h3",{class:'title', innerHTML:'Recent Activity'}, 'recent');
-		domStruct.create("h3",{class:'title', innerHTML:'Recommendation'}, 'recommendation');
-		domStruct.create("h3",{class:'title', innerHTML:'Advisory Commen Sense'}, 'advisory');
+		domConstruct.create("h3",{class:'title', innerHTML:'Recent Activity'}, 'recent');
+		domConstruct.create("h3",{class:'title', innerHTML:'Recommendation'}, 'recommendation');
+		domConstruct.create("h3",{class:'title', innerHTML:'Advisory Commen Sense'}, 'advisory');
 
 		request("/client/server/rest/data/recent.json", {
 				handleAs : "json"
 			}).then(function(acts){
-				var ul = domStruct.create("ul", null, 'recent');
+				var ul = domConstruct.create("ul", null, 'recent');
 				array.forEach(acts, function(act){
-					var li = domStruct.create("li", null, ul);
+					var li = domConstruct.create("li", null, ul);
 					var listact = new ListActivity(act).placeAt(li);
 				});
 			});
@@ -122,9 +130,9 @@ require(['dojo/dom',
 		request("/client/server/rest/data/recommendation.json", {
 				handleAs : "json"
 			}).then(function(routes){
-				var ul = domStruct.create("ul", null, 'recommendation');
+				var ul = domConstruct.create("ul", null, 'recommendation');
 				array.forEach(routes, function(route){
-					var li = domStruct.create("li", null, ul);
+					var li = domConstruct.create("li", null, ul);
 					var listact = new ListActivity(route).placeAt(li);
 				});
 			});
@@ -132,10 +140,10 @@ require(['dojo/dom',
 		request("/client/server/rest/data/advisory.json", {
 			handleAs : "json"
 			}).then(function(advisory){
-				var ul = domStruct.create("ul", null, 'advisory');
+				var ul = domConstruct.create("ul", null, 'advisory');
 				array.forEach(advisory, function(adv){
-					var li = domStruct.create("li", null, ul);
-					domStruct.create("a", {innerHTML:adv.title, href:adv.target}, li);
+					var li = domConstruct.create("li", null, ul);
+					domConstruct.create("a", {innerHTML:adv.title, href:adv.target}, li);
 				});
 		});
     });

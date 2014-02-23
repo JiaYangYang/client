@@ -144,3 +144,13 @@ h3.title{
 	font-size:12px;
 	font-weight:bold;
 }
+
+.eventPane {
+    margin-top: 5px;
+}
+
+.eventPane div {
+    float: left;
+    width: 50%;
+    background-color: lightblue;
+}

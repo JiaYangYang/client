@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "type": "Walking",
+        "path": "20140223",
+        "module": "1"
+    },
+    {
+        "id": "2",
+        "type": "Cycling",
+        "path": "20140223",
+        "module": "2"
+    },
+    {
+        "id": "3",
+        "type": "Camping",
+        "path": "20140223",
+        "module": "3"
+    }
+]

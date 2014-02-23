@@ -9,11 +9,10 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="resources/style/client/common.css">
-    <link rel="stylesheet" href="resources/script/dijit/themes/claro/claro.css">
     <link rel="stylesheet" href="resources/style/client/slider/js-image-slider.css">
-	<link rel="stylesheet" href="resources/style/client/activity/activity.css">
-	<link rel="stylesheet" href="resources/style/client/activity/listactivity.css">
-	<link rel="stylesheet" href="resources/style/client/home.css">
+    <link rel="stylesheet" href="resources/style/client/activity/activity.css">
+    <link rel="stylesheet" href="resources/style/client/activity/listactivity.css">
+    <link rel="stylesheet" href="resources/style/client/home.css">
     <script src="resources/script/dojo/dojo.js"
             data-dojo-config="async: true, parseOnLoad: true"></script>
     <script src="resources/script/client/common.js"></script>
@@ -22,30 +21,35 @@
     <title>Home</title>
 </head>
 <body class="claro">
-    <div class="container">
-        <div id="headerNode"></div>
-        <div id="navNode"></div>
-        <div class="mainFrame">
-            <div class="top">
-                <div class="sliderContainer">
-                    <div id="slider"></div>
-                </div>
-                <div class="share"></div>
+<div class="container">
+    <div id="headerNode"></div>
+    <div id="navNode"></div>
+    <div class="mainFrame">
+        <div class="top">
+            <div class="sliderContainer">
+                <div id="slider"></div>
             </div>
-            <div class="content">
-                <div class="mainPane">
-                    <div id="hot"></div>
-                    <div id="latest"></div>
-					<div id="travel"></div>
-                </div>
-                <div class="rightPane">
-                    <div id="recent"></div>
-                    <div id="recommendation"></div>
-					<div id="advisory">
+            <div class="share"></div>
+        </div>
+        <div class="eventPane">
+            <div id="publishButton" class="hand-cursor" title="Publish">Publish</div>
+            <div>Join</div>
+        </div>
+        <div class="content">
+            <div class="mainPane">
+                <div id="hot"></div>
+                <div id="latest"></div>
+                <div id="travel"></div>
+            </div>
+            <div class="rightPane">
+                <div id="recent"></div>
+                <div id="recommendation"></div>
+                <div id="advisory">
                 </div>
             </div>
         </div>
-        <div id="footerNode"></div>
     </div>
+    <div id="footerNode"></div>
+</div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+BASE_PATH = 'http://localhost/client';
 REST_PATH = 'http://localhost/server/rest';
 
 require(['dojo/dom',
