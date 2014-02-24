@@ -2,94 +2,47 @@ require([
     'dojo/dom',
     'dojo/on',
     'dojo/dom-construct',
+    'dojo/store/JsonRest',
     'dojo/request',
     'dojo/json',
     'dojo/_base/array',
     'dijit/form/Select',
     'dijit/form/CheckBox',
     'dijit/form/Button',
+    'client/module/event/BasicFields',
     'dojo/domReady!'],
-    function (dom, on, domConstruct, request, JSON, array, Select, CheckBox, Button) {
+    function (dom, on, domConstruct, JsonRest, request, JSON, array, Select, CheckBox, Button, BasicFields) {
 
         var eventType;
-        var currWidget;
-        var events = {};
-        var fields = {};
+        createEventTypes();
+        createFields();
+        createButtonPane();
 
-        loadEventTypes();
-
-        function loadEventTypes() {
-            request(BASE_PATH + '/resources/script/client/event/widgets/descriptor.json', {
-                handleAs: 'json'
-            }).then(function (data) {
-                    var options = [];
-                    array.forEach(data, function (item) {
-                        !item.disabled && options.push({
-                            label: item.type, value: item.id
-                        });
-                        events[item.id] = item;
-                    });
-                    loadFields();
-                    createEventTypes(options);
-                });
-        }
-
-        function loadFields() {
-            request(BASE_PATH + '/resources/script/client/event/fields/descriptor.json', {
-                handleAs: 'json'
-            }).then(function (data) {
-                    createFieldPane(data);
-                    createButtonPane();
-                });
-        }
-
-        function createEventTypes(options) {
+        function createEventTypes() {
+            var store = new JsonRest({
+                idProperty: 'id',
+                target: REST_PATH + '/event_type'
+            });
             var node = dom.byId('selector');
             eventType = new Select({
                 required: true,
-                options: options,
-                onChange: function (val) {
-                    currWidget && currWidget.destroyRecursive();
-                    currWidget = null;
-                    loadTemplate(val);
-                }
+                store: store,
+                labelAttr: 'name'
             }, node);
-            loadTemplate(eventType.get('value'));
+            eventType.startup();
         }
 
-        function createFieldPane(data) {
-            array.forEach(data, function (item) {
-                if (!item.disabled) {
-                    var pane = domConstruct.create('div', null, 'fieldPane');
-                    var widgetNode = domConstruct.create('span', null, pane);
-                    new CheckBox({
-                        value: item.id,
-                        onChange: function (checked) {
-                            fields[item.id] = checked;
-                        }
-                    }).placeAt(widgetNode);
-                    var labelNode = domConstruct.create('span', {
-                        innerHTML: item.name
-                    }, pane);
-                }
-            });
+        function createFields() {
+            var fields = new BasicFields({
 
-        }
-
-        function loadTemplate(moduleId) {
-            var item = events[moduleId];
-            var module = item.path + '/' + item.module + '/widget_1';
-            require(['client/event/widgets/' + module], function (Widget) {
-                var node = domConstruct.create('div', null, 'widgetPane');
-                currWidget = new Widget({}, node);
-            });
+            }, 'widgetPane');
         }
 
         function createButtonPane() {
-            var button = new Button({
+            new Button({
                 label: 'Submit',
                 onClick: function () {
-                    if (currWidget && currWidget.validate()) {
+                    if (eventType.get('value')) {
                         sendPost();
                     }
                 }
@@ -97,30 +50,7 @@ require([
         }
 
         function sendPost() {
-            var fieldArr = [];
 
-            for (var id in fields) {
-                if (fields[id]) {
-                    fieldArr.push(id);
-                }
-            }
-
-            var data = {
-                event_type: eventType.get('value'),
-                widget: currWidget.get('serializable'),
-                fields: fieldArr
-            };
-
-            var jsonString = JSON.stringify(data);
-
-            request.post(REST_PATH + '/event_instance', {
-                data: {
-                    data: jsonString
-                },
-                handleAs: 'json'
-            }).then(function (data) {
-
-                });
         }
 
     });

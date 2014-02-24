@@ -6,7 +6,7 @@ define([
     'dijit/form/DateTextBox',
     'dijit/_WidgetBase',
     'dijit/_TemplatedMixin',
-    'dojo/text!./template_1.html'
+    'dojo/text!../../templates/event/basic_fields.html'
 ], function (declare, dateUtil, ValidationTextBox, Form, DateTextBox, _WidgetBase, _TemplatedMixin, template) {
 
     return declare([_WidgetBase, _TemplatedMixin], {
